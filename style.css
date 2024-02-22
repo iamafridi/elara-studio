@@ -1,13 +1,18 @@
 @font-face {
+  font-family: neu;
+  src: url(./fonts/NeueHaasDisplayMediu.ttf);
+}
+@font-face {
   font-family: neue;
-  src: url(./NeueHaasDisplayMediu.ttf);
+  font-weight: 100;
+  src: url(./fonts/NeueHaasDisplayLight.ttf);
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: neue;
+  font-family: neu;
 }
 html,
 body {
@@ -176,20 +181,21 @@ body {
 }
 
 /* Page 2 */
-#page2{
+#page2 {
   min-height: 100vh;
   width: 100%;
-padding: 8vw 0;
+  padding: 8vw 0;
+  position: relative;
 }
-#moving-text{
+#moving-text {
   white-space: nowrap;
   overflow-x: auto;
 }
-#moving-text::-webkit-scrollbar{
+#moving-text::-webkit-scrollbar {
   display: none;
 }
 
-.con{
+.con {
   white-space: nowrap;
   text-transform: uppercase;
   display: inline-block;
@@ -198,11 +204,11 @@ padding: 8vw 0;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
-#moving-text h1{
+#moving-text h1 {
   font-size: 9vw;
   display: inline-block;
 }
-#dot{
+#dot {
   height: 70px;
   width: 70px;
   border-radius: 50%;
@@ -212,10 +218,74 @@ padding: 8vw 0;
 }
 
 @keyframes move {
-  from{
+  from {
     transform: translateX(0);
   }
-  to{
+  to {
     transform: translateX(-100%);
   }
+}
+
+#page2-bottom {
+  height: 80vh;
+  width: 100%;
+  padding: 4.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 9;
+}
+#page2-bottom h1 {
+  font-size: 2vw;
+  width: 60%;
+  line-height: 4vw;
+}
+
+#bottom-part2 {
+  width: 20%;
+}
+
+#bottom-part2 img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+#bottom-part2 p {
+  font-family: neue;
+  font-weight: 100;
+  margin-top: 2vw;
+}
+
+#page2 #effect {
+  height: 35vw;
+  width: 35vw;
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(to top right,rgb(167, 5, 37), rgba(25, 218, 15, 0.481));
+  top: 28%;
+  left: 25%;
+  filter: blur(20px);
+  animation-name: effect;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes effect {
+ from{
+  filter: blur(20px);
+  transform: translate(10%,-10%) skew(0);
+ }  
+ to{
+  filter: blur(30px);
+  transform: translate(-10%,10%) skew(-12deg);
+ }  
+}
+
+
+#page3{
+  height: 100vh;
+  width: 100%;
 }
