@@ -262,7 +262,11 @@ body {
   width: 35vw;
   position: absolute;
   border-radius: 50%;
-  background: linear-gradient(to top right,rgb(167, 5, 37), rgba(25, 218, 15, 0.481));
+  background: linear-gradient(
+    to top right,
+    rgb(167, 5, 37),
+    rgba(25, 218, 15, 0.481)
+  );
   top: 28%;
   left: 25%;
   filter: blur(20px);
@@ -274,18 +278,52 @@ body {
 }
 
 @keyframes effect {
- from{
-  filter: blur(20px);
-  transform: translate(10%,-10%) skew(0);
- }  
- to{
-  filter: blur(30px);
-  transform: translate(-10%,10%) skew(-12deg);
- }  
+  from {
+    filter: blur(20px);
+    transform: translate(10%, -10%) skew(0);
+  }
+  to {
+    filter: blur(30px);
+    transform: translate(-10%, 10%) skew(-12deg);
+  }
 }
 
-
-#page3{
-  height: 100vh;
+/* Page 3  */
+#page3 {
+  min-height: 100vh;
   width: 100%;
+  background-color: #efeae3;
+  padding: 4vw 0;
+}
+
+#elem {
+  height: 150px;
+  width: 100%;
+  position: relative;
+  /* border-top: 1px solid black; */
+  border-bottom: 1px solid rgba(69, 68, 68, 0.773);
+  /* background-color: rgba(172, 226, 10, 0.867); */
+  display: flex;
+  align-items: center;
+  padding: 0 2vw;
+  overflow: hidden;
+}
+
+#elem h2 {
+  font-size: 3vw;
+  position: relative;
+  z-index: 9;
+}
+#elem .overlay {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(172, 226, 10, 0.867);
+  position: absolute;
+  left: 0;
+  top: -100%;
+  transition: all ease 0.2s ;
+}
+
+#elem:hover .overlay {
+  top: 0;
 }
