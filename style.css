@@ -174,3 +174,48 @@ body {
     transform: translate(-25%, 35%);
   }
 }
+
+/* Page 2 */
+#page2{
+  min-height: 100vh;
+  width: 100%;
+padding: 8vw 0;
+}
+#moving-text{
+  white-space: nowrap;
+  overflow-x: auto;
+}
+#moving-text::-webkit-scrollbar{
+  display: none;
+}
+
+.con{
+  white-space: nowrap;
+  text-transform: uppercase;
+  display: inline-block;
+  animation-name: move;
+  animation-duration: 25s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+#moving-text h1{
+  font-size: 9vw;
+  display: inline-block;
+}
+#dot{
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  background-color: crimson;
+  display: inline-block;
+  margin: 1vw 2vw;
+}
+
+@keyframes move {
+  from{
+    transform: translateX(0);
+  }
+  to{
+    transform: translateX(-100%);
+  }
+}
