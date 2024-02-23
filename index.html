@@ -14,8 +14,13 @@
       href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
     />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
   <body>
+    <div id="fixed-image"></div>
     <div id="main">
       <div id="page1">
         <!-- Nav Div -->
@@ -100,36 +105,49 @@
           <!-- <div id="effect1"></div>
           <div id="effect2"></div> -->
         </div>
-        <div id="page3">
-          <div id="elem">
+      </div>
+      <div id="page3">
+        <div id="elem-container">
+          <div class="elem" data-image="./assets/Images/Modern-Minimalism.jpg">
             <div class="overlay"></div>
             <h2>Modern Minimalism</h2>
           </div>
-          <div id="elem">
+          <div class="elem" data-image="./assets/Images/Rustic-Revival.jpg">
             <div class="overlay"></div>
             <h2>Rustic Revival</h2>
           </div>
-          <div id="elem">
+          <div class="elem" data-image="./assets/Images/Modern-Elegance.jpg">
             <div class="overlay"></div>
             <h2>Modern Elegance</h2>
           </div>
-          <div id="elem">
+          <div class="elem" data-image="./assets/Images/Bohemian-Haven.jpg">
             <div class="overlay"></div>
             <h2>Bohemian Haven</h2>
           </div>
-          <div id="elem">
+          <div
+            class="elem"
+            data-image="./assets/Images/Art-Deco-Extravaganza.jpg"
+          >
             <div class="overlay"></div>
             <h2>Art Deco Extravaganza</h2>
           </div>
-          <div id="elem">
+          <div class="elem" data-image="./assets/Images/Tropical-Paradise.jpg">
             <div class="overlay"></div>
             <h2>Tropical Paradise</h2>
           </div>
         </div>
       </div>
+      <div id="page4"></div>
+      <div id="page5"></div>
     </div>
-
+    <!-- Footer -->
+    <div id="footer">
+      <div id="footer-div"></div>
+      <h1>ELARA</h1>
+      <div id="footer-bottom"></div>
+    </div>
     <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"

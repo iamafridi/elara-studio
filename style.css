@@ -19,7 +19,11 @@ body {
   height: 100%;
   width: 100%;
 }
-
+#main {
+  /* background-color: black; */
+  position: relative;
+  z-index: 10;
+}
 #page1 {
   min-height: 100vh;
   width: 100%;
@@ -186,6 +190,7 @@ body {
   width: 100%;
   padding: 8vw 0;
   position: relative;
+  background-color: #efeae3;
 }
 #moving-text {
   white-space: nowrap;
@@ -296,7 +301,7 @@ body {
   padding: 4vw 0;
 }
 
-#elem {
+.elem {
   height: 150px;
   width: 100%;
   position: relative;
@@ -309,21 +314,84 @@ body {
   overflow: hidden;
 }
 
-#elem h2 {
+.elem h2 {
   font-size: 3vw;
   position: relative;
   z-index: 9;
 }
-#elem .overlay {
+.elem .overlay {
   height: 100%;
   width: 100%;
   background-color: rgba(172, 226, 10, 0.867);
   position: absolute;
   left: 0;
   top: -100%;
-  transition: all ease 0.2s ;
+  transition: all ease 0.2s;
 }
 
-#elem:hover .overlay {
+.elem:hover .overlay {
   top: 0;
+}
+
+/* #elem-container {
+} */
+
+#fixed-image {
+  height: 30vw;
+  width: 30vw;
+  border-radius: 10px;
+  position: fixed;
+  z-index: 9;
+  left: 50%;
+  top: 25%;
+  display: none;
+  /* background-color: blueviolet; */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Page 4 */
+#page4 {
+  height: 60vh;
+  width: 100%;
+  background-color: #efeae3;
+}
+/* Page 5 */
+#page5 {
+  height: 100vh;
+  width: 100%;
+  /* background-color: #efeae3; */
+}
+
+/* Footer */
+#footer {
+  position: fixed;
+  height: 105vh;
+  width: 100%;
+  background-color: black;
+  color: #fff;
+  z-index: 9;
+  bottom: 0;
+  display: flex;
+  /* align-items: flex-end; */
+  justify-content: flex-end;
+  flex-direction: column;
+  padding: 1vw 3vw;
+}
+
+#footer h1{
+  font-size: 26vw;
+  text-align: center;
+}
+
+#footer-div{
+  height: 20vh;
+  width: 100%;
+
+}
+
+#footer-bottom{
+  border-top: 1px solid #efeae3;
+  height: 10vh;
+  width: 100%;
 }
