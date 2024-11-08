@@ -45,6 +45,10 @@ body {
   align-items: center;
   gap: 1vw;
 }
+
+#nav h3{
+  display: none;
+}
 .nav-part2 h4 {
   padding: 10px 20px;
   border: 1px solid #ebcbcb;
@@ -352,10 +356,31 @@ body {
 
 /* Page 4 */
 #page4 {
-  height: 60vh;
+  height: 70vh;
   width: 100%;
   background-color: #efeae3;
+  padding: 10vw 2vw;
 }
+
+/* Swiper */
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  /* background: #fff; */
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  width: 30%;
+  border-left: 1px solid #7e7777;
+  padding-inline-start: 0 2vw;
+}
+
 /* Page 5 */
 #page5 {
   height: 100vh;
@@ -379,19 +404,55 @@ body {
   padding: 1vw 3vw;
 }
 
-#footer h1{
+#footer h1 {
   font-size: 26vw;
   text-align: center;
 }
 
-#footer-div{
+#footer-div {
   height: 20vh;
   width: 100%;
-
+  /* background-color: red; */
 }
 
-#footer-bottom{
+#footer-bottom {
   border-top: 1px solid #efeae3;
   height: 10vh;
   width: 100%;
+}
+
+#full-scr{
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(148, 140, 140, 0.537);
+  position: fixed;
+  z-index: 99;
+  top: -100%;
+}
+
+@media (max-width: 600px) {
+  #page1 {
+    min-height: 100vh;
+    width: 100%;
+    padding: 0 5vw;
+  }
+
+  #nav {
+    padding: 8vw 0vw;
+    position: relative;
+    z-index: 100;
+  }
+
+  .nav-part2 {
+    display: none;
+  }
+  
+  #nav h3{
+    display: block;
+    padding: 3vw 5vw;
+    border: 1px solid #302b2b;
+    border-radius: 50px;
+    font-size: 4vw;
+    padding-left: 10vw;
+  }
 }
